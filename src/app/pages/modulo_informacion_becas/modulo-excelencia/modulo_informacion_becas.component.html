@@ -1,0 +1,243 @@
+<div class="contenido_dashboard">
+
+    <h2 nz-typography> Estado de la Beca </h2>
+    <nz-tabset [(nzSelectedIndex)]="tab">
+        <nz-tab nzTitle="Datos Personales"> 
+            <div nz-col class="gutter-row" [nzSpan]="16">
+                <!--h3 nz-typography>Excelencia Academica</h3-->
+             </div> 
+
+
+
+             <h4 nz-typography> Informacion basica </h4>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }"> 
+        <div nz-col class="gutter-row" [nzSpan]="6" > 
+            <h5 nz-typography>Cédula:</h5>
+            <label>{{item.r_cedula}}</label>
+            <!--nz-select nzAllowClear nzPlaceHolder="Seleccione la escuela..."> 
+                <nz-option>
+                </nz-option>
+            </nz-select-->
+        </div>
+
+        <div  nz-col class="gutter-row" [nzSpan]="6">  
+            <h5 nz-typography>Apellidos:  </h5>
+            <label for=""></label>
+            <!--nz-select nzAllowClear nzPlaceHolder="Seleccione el periodo ..."> 
+                <nz-option>
+                </nz-option>
+            </nz-select-->
+        </div>
+        <div nz-col class ="gutter-row" [nzSpan]="6">
+            <h5 nz-typography> Nombres:  </h5> 
+            <label for=""></label>
+        </div>
+
+        <div nz-col class ="gutter-row" [nzSpan]="6">
+            <h5 nz-typography> Teléfono:  </h5>
+            <label for=""></label>
+        </div>
+
+        <!--div nz-col class="gutter-row" [nzSpan]="5" > 
+            <button nz-button nzType="primary" nzBlock>IMPRIMIR</button>
+            <button nz-button nzType="default" nzBlock>GENERAR</button>
+            
+                <div class="search-container">
+                    <span nz-icon nzType="search" ></span>
+                 <div class="text-right">
+                    <div nz-input-group class="search-input">            
+                        <input nz-input [(ngModel)]="filtro" placeholder="Buscar" />
+                    </div>
+
+                </div>
+
+                  </div>
+                
+                </div--> 
+
+    </div>   
+    <div nz-col class="gutter-row" [nzSpan]="20">
+        <h3 nz-typography>Lugar de residencia:</h3>
+        <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }"> 
+
+    <div nz-col class="gutter-row" [nzSpan]="5" > 
+         <h5 nz-typography>Direccion de residencia:</h5>
+         <label for=""></label>
+         </div>
+
+     <div nz-col class="gutter-row" [nzSpan]="4" > 
+            <h5 nz-typography>Zona:</h5>
+            <label for=""></label>
+            </div>
+
+           <div nz-col class="gutter-row" [nzSpan]="4" > 
+                <h5 nz-typography>Parroquia:</h5>
+                <label for=""></label>
+                </div>
+           <div nz-col class="gutter-row" [nzSpan]="4" > 
+                    <h5 nz-typography>Canton:</h5>
+                    <label for=""></label>
+                    </div>
+            <div nz-col class="gutter-row" [nzSpan]="4" > 
+                        <h5 nz-typography>Provincia:</h5>
+                        <label for=""></label>
+                        </div>
+
+
+        </div>
+
+
+        <div nz-col class="gutter-row" [nzSpan]="16">
+            <h3 nz-typography>Informacion de contacto de emergencia:</h3>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }"> 
+    
+        <div nz-col class="gutter-row" [nzSpan]="8" > 
+             <h5 nz-typography>Nombre de contacto:</h5>
+             <label for=""></label>
+             </div>
+    
+         <div nz-col class="gutter-row" [nzSpan]="6" > 
+                <h5 nz-typography>Teléfonos:</h5>
+                <label for=""></label>
+                </div>
+    
+                        </div>
+
+
+                        
+        <div nz-col class="gutter-row" [nzSpan]="18">
+            <h3 nz-typography>Informacion de estudio:</h3>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }"> 
+    
+        <div nz-col class="gutter-row" [nzSpan]="6" > 
+             <h5 nz-typography>Escuela:</h5>
+             <label for=""></label>
+             </div>
+    
+         <div nz-col class="gutter-row" [nzSpan]="6" > 
+                <h5 nz-typography>Facultad:</h5>
+                <label for=""></label>
+                </div>
+
+        <div nz-col class="gutter-row" [nzSpan]="6" > 
+                    <h5 nz-typography>Nivel:</h5>
+                    <label for=""></label>
+                    </div>
+
+                    <div nz-col class="gutter-row" [nzSpan]="6" > 
+                        <h5 nz-typography>Promedio:</h5>
+                        <label for=""></label>
+                        </div>
+    
+                        </div>
+                    </div>
+            </div>
+
+    </div>
+   
+    <nz-tab nzTitle="Estado de Beca"> 
+
+        <div nz-col class="gutter-row" [nzSpan]="16">
+            <h3 nz-typography>Estado de Becas </h3>
+         </div> 
+         <div class="search-container">
+            <span nz-icon nzType="search" ></span>
+         <div class="text-right">
+            <div nz-input-group class="search-input">            
+                <input nz-input [(ngModel)]="filtro" placeholder="Buscar" />
+            </div>
+
+        </div>
+          </div>
+
+          <nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="beca">
+                
+            <thead>
+               
+                        
+
+            
+               
+                              
+                <tr>
+                    
+                    <th style="width: 15%; text-align: center;">Beca Solicitada</th>
+                    <th style="width: 15%; text-align: center;">Departamento</th>
+                    <th style="width: 20%; text-align: center;">Observaciones</th>
+                    <th style="width: 20%; text-align: center;">Estado</th>
+                    
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let item of nzTablePersonas.data; let i = index">
+                    <td style="text-align: center;">{{item.tipobeca}}</td>
+                    <td style="text-align: center;">{{item.unidad}}</td>
+                    <td style="text-align: justify;">{{item.observacion}}</td>
+                    <td style="text-align: justify;">{{item.estado}}</td>
+                    
+
+                </tr>
+            </tbody>
+        </nz-table>
+        
+
+
+
+
+
+        </nz-tab>
+
+               <!--tr>
+                <div class="search-container">
+                    <span nz-icon nzType="search" ></span>
+                 <div class="text-right">
+                    <div nz-input-group class="search-input">            
+                        <input nz-input [(ngModel)]="filtro" placeholder="Buscar" />
+                    </div>
+
+                </div>
+                  </div>
+               </tr-->  
+       
+            <!--nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="personas">
+                
+                <thead>
+                   
+                
+                    <tr>
+                        <th style="width: 15%; text-align: center;">ID</th>
+                        <th style="width: 15%; text-align: center;">Cedula.</th>
+                        <th style="width: 20%; text-align: center;">Nombres</th>
+                        <th style="width: 20%; text-align: center;">Nivel</th>
+                        <th style="width: 20%; text-align: center;">Escuela</th>
+                        <th style="width: 20%; text-align: center;">Discapacidad</th>
+                        <th style="width: 20%; text-align: center;">Tipo Becas</th>
+                        <th style="width: 20%; text-align: center;">Acciones</th>
+                        <th style="width: 20%; text-align: center;">Accion</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of nzTablePersonas.data; let i = index">
+                        <td style="text-align: center;">{{item.ID}}</td>
+                        <td style="text-align: center;">{{item.Cedula}}</td>
+                        <td style="text-align: justify;">{{item.nombres}}</td>
+                        <td style="text-align: justify;">{{item.Nivel}}/td>
+                        <td style="text-align: center;">{{item.Escuela}}</td>
+                        <td style="text-align: center;">{{item.Discapacidad}}</td>
+                        <td style="text-align: center;">{{item.Tipo_Becas}}</td>
+                        <td style="text-align: center;">{{item.Acciones}}</td>
+                        <td style="text-align: center;">
+                            <button nz-button nzType="primary">Primary Button</button>
+                            <button nz-button nzType="default">Default Button</button>
+                        </td>
+                       
+                    </tr>
+    
+                </tbody>
+            </nz-table-->
+        </nz-tab>
+    </nz-tabset>
+</div>
+

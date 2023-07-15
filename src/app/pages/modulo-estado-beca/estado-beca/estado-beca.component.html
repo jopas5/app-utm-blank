@@ -1,0 +1,72 @@
+<div class="contenido_dashboard">
+    <nz-tabset [(nzSelectedIndex)]="tab">
+    <nz-tab nzTitle="">
+    <strong> Periodo Académico:</strong>
+    
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    <div nz-col class="gutter-row" [nzSpan]="10">
+    <nz-select [(ngModel)]="anio_inicio" nzAllowClear
+                        nzPlaceHolder="Seleccione Periodo Académico">
+                        <nz-option *ngFor="let item of periodos" nzValue="{{item.idperiodo}}"
+                        nzLabel="{{item.nombre}}">
+                        </nz-option>
+        </nz-select> 
+    </div>
+    <button nz-button nzType="primary" (click)="obtener_estadobeca(anio_inicio)">Ver</button>
+    </div>
+    </nz-tab>
+    </nz-tabset>
+    <!-- ngModelChange -- Genera un evento al cambiar el select--> 
+    
+    <div nz-col class="elemento" [nzSpan]="4">
+        <nz-page-header-title class="elemento"> Lista de estudiantes</nz-page-header-title>
+    </div>
+        
+    
+    
+
+        <nz-tabset [(nzSelectedIndex)]="tab">
+            <nz-tab  nzTitle="">
+          
+
+                <div class="search-container">
+                    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                        <input type="text" nz-input [(ngModel)]="searchText" (input)="filtrarEstadobeca()" placeholder="Buscar" />
+                    </nz-input-group>
+                    <ng-template #suffixIconButton>
+                        <button nz-button nzType="primary" ><span nz-icon nzType="search"></span></button>
+                    </ng-template>
+                </div>
+
+                <nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="Estadobeca">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%; text-align: center;">Cédula</th>
+                            <th style="width: 15%; text-align: center;">Nombres</th>
+                            <th style="width: 15%; text-align: center;">Escuela</th>
+                            <th style="width: 10%; text-align: center;">Discapacidad</th>
+                            <th style="width: 10%; text-align: center;">Tipo Becas</th>
+                            <th style="width: 15%; text-align: center;">Estado</th>
+                            <th style="width: 15%; text-align: center;">Observación</th>
+                            <th style="width: 10%; text-align: center;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of filteredEstadobeca; let i = index">
+                            <td style="text-align: center;">{{item.r_cedula}}</td>
+                            <td style="text-align: center;">{{item.r_nombres}}</td>
+                            <td style="text-align: center;">{{item.r_escuela}}</td>
+                            <td style="text-align: center;">{{item.r_tipo_discapacidad}}</td>
+                            <td style="text-align: center;">{{item.r_tipo_becas}}</td>
+                            <td style="text-align: center;">{{item.r_estado}}</td>
+                            <td style="text-align: center;">{{item.r_observacion}}</td>
+                            <td style="text-align: center;">
+                                <button nz-button nzType="primary" (click)="cargar_estadobeca(item)">Ver Estado</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+
+            </nz-tab>>
+        </nz-tabset>
+</div>

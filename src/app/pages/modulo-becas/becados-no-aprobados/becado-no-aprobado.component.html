@@ -1,0 +1,46 @@
+<div class="contenido_dashboard">
+    <div nz-col class="gutter-row" [nzSpan]="16">
+        <nz-page-header-title> Listado de Estudiantes </nz-page-header-title>
+    </div>
+
+    <div class="search-container">
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" nz-input [(ngModel)]="searchText" (input)="filtrarEstadobeca()" placeholder="Buscar" />
+        </nz-input-group>
+        <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" ><span nz-icon nzType="search"></span></button>
+        </ng-template>
+          </div>
+    
+            <nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="Estadobeca">
+                <thead>
+                    <tr>
+                        <th style="width: 15%; text-align: center;">Cedula</th>
+                        <th style="width: 20%; text-align: center;">Nombres</th>
+                        <th style="width: 20%; text-align: center;">Escuela</th>
+                        <th style="width: 20%; text-align: center;">Discapacidad</th>
+                        <th style="width: 20%; text-align: center;">Tipo Becas</th>
+                        <th style="width: 20%; text-align: center;">Estado</th>
+                        <th style="width: 20%; text-align: center;">Observación</th>
+                        <th style="width: 20%; text-align: center;">Quien Ingresó:</th>
+                        <th style="width: 20%; text-align: center;">Acciones</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of nzTablePersonas.data; let i = index">
+                        <td style="text-align: center;">{{item.r_cedula}}</td>
+                        <td style="text-align: justify;">{{item.r_nombres}}</td>
+                        <td style="text-align: center;">{{item.r_escuela}}</td>
+                        <td style="text-align: center;">{{item.r_tipo_discapacidad}}</td>
+                        <td style="text-align: center;">{{item.r_tipo_becas}}</td>
+                        <td style="text-align: center;">{{item.r_estado}}</td>
+                        <td style="text-align: center;">{{item.r_observacion}}</td>
+                        <td style="text-align: center;">{{item.persona_aprueba}}</td>
+                        
+                    </tr>
+                </tbody>
+            </nz-table>
+       
+</div>

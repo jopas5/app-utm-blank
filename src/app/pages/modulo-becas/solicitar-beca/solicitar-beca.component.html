@@ -1,0 +1,32 @@
+<div class="contenido_dashboard">
+    <nz-page-header>
+        <nz-page-header-title>Solicitar Beca</nz-page-header-title>
+        <nz-page-header-extra>
+            <button nz-button nz-popconfirm nzPopconfirmTitle="Está seguro de cancelar este registro?" nzType="primary" nzDanger
+                nzPopconfirmPlacement="bottomRight">
+                CANCELAR
+            </button>
+            <button nz-button nz-popconfirm nzPopconfirmTitle="Está seguro de guardar este registro?" nzType="primary"
+                nzPopconfirmPlacement="bottomRight">
+                GUARDAR
+            </button>
+        </nz-page-header-extra>
+    </nz-page-header>
+    
+    <nz-content>
+        
+        <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+            <div nz-col class="gutter-row" nzSpan="6">
+                <label>Cedula</label>
+            </div>
+            <div nz-col class="gutter-row" nzSpan="6">
+                <label>Nombre</label>
+                <div>{{nombre}}</div>
+            </div>
+            
+        </div>   
+    </nz-content>
+
+    
+
+</div>

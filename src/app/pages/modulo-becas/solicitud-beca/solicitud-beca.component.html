@@ -1,0 +1,53 @@
+<div class="contenido_dashboard">
+        <nz-page-header-title> Listado de Estudiantes con Solicitud </nz-page-header-title>
+    
+    
+<div nz-col class="gutter-row" [nzSpan]="10">
+    <label>Periodo (*):</label>
+    <nz-select  nzAllowClear
+        nzPlaceHolder="Seleccione el periodo ...">
+        <nz-option *ngFor="let item of periodos" nzValue="{{item.idperiodo}}"
+        nzLabel="{{item.nombre}}">
+        </nz-option>
+    </nz-select>
+</div>
+<div class="search-container">
+    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+        <input type="text" nz-input placeholder="Buscar" />
+    </nz-input-group>
+    <ng-template #suffixIconButton>
+        <button nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
+    </ng-template>
+</div>
+    
+
+            <nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="estudiantes">
+                <thead>
+                    <tr>
+                        <th style="width: 15%; text-align: center;">Cedula.</th>
+                        <th style="width: 20%; text-align: center;">Nombres</th>
+                        <th style="width: 10%; text-align: center;">Nivel</th>
+                        <th style="width: 20%; text-align: center;">Escuela</th>
+                        <th style="width: 20%; text-align: center;">Discapacidad</th> 
+                        <th style="width: 20%; text-align: center;">Id Escuela</th>
+                        <th style="width: 20%; text-align: center;">Acciones</th>
+                        <th style="width: 20%; text-align: center;">Subsecuente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of nzTablePersonas.data; let i = index">
+                        <td style="text-align: center;">{{item.cedula}}</td>
+                        <td style="text-align: justify;">{{item.nombres}}</td>
+                        <td style="text-align: justify;">{{item.nivel}}/td>
+                        <td style="text-align: center;">{{item.escuelas}}</td>
+                        <td style="text-align: center;">{{item.tipo_discapacidad}}</td>
+                        <td style="text-align: center;">{{item.idescuela}}</td>
+                        <td style="text-align: center;">
+                            <button nz-button nzType="primary" >Solicitar Becas</button>
+                        </td>
+                        <td style="text-align: center;">{{item.subsecuente}}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+       
+</div>

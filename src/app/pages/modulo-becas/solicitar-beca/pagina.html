@@ -1,0 +1,624 @@
+<div class="contenido_dashboard">
+    <div class="content-wrapper" style="min-height: 456px;">
+        <div class="container-fluid" id="page-wrapper">
+            <div class="row">
+    
+                <div class="col-md-8 col-xs-8" style="color: #428BCA">
+                    <h3 class="">Solicitar Beca</h3>
+                </div>
+                <div class="col-md-4 col-xs-4" align="right">
+                    <h6 class="">    
+                        <button id="guardar_beca" nombre="guardar_beca" class="btn btn-info guardar_beca"><i
+                                class="fa fa-save "></i> Guardar</button>
+                    </h6>    
+                </div>
+    
+            </div>
+            <div class="col-md-18">
+                <div class="divider-header"></div>
+            </div>
+            <div class="panel panel-info">
+
+                <div class="panel-heading">
+                    Datos de la Beca:
+                </div>
+                <br>
+    
+                <div class="container-fluid">
+                    <div class="row container-fluid">
+                        <div class="panel-body">
+                            <dl class="dl">
+                                <div class="row">
+                                    <div class="col-md-12" style="color: #428BCA">
+                                        <h4>Información básica:</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <dt>Cédula:</dt>
+                                        <dd id="cedula"></dd>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <dt>Apellidos:</dt>
+                                        <dd id="apellidos"></dd>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <dt>Nombres:</dt>
+                                        <dd id="nombres"></dd>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <dt>Teléfono:</dt>
+                                        <dd id="telefono"></dd>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <p> </p>
+                                    <div class="col-md-12" style="color: #428BCA">
+                                        <h4>Información de Estudio:</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <dt>Escuela</dt>
+                                        <dd id="escuela"></dd>
+                                    </div>
+    
+                                    <div class="col-md-3">
+                                        <dt>Facultad:</dt>
+                                        <dd id="facultad"></dd>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <dt>Nivel:</dt>
+                                        <dd id="nivel"></dd>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <dt>Promedio:</dt>
+                                        <dd id="promedio"></dd>
+                                    </div>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+    
+    
+    
+    
+                                <div class=" col-md-2">
+                                    <h4 style="color: #428BCA">Becas:</h4>
+                                </div>
+                                <div class="col-md-9">
+                                    <select id="tipobeca" name="tipobeca" class="selectpicker bs-select-hidden"
+                                        data-width="100%" data-live-search="true" title="Seleccione tipo de Becas"
+                                        required="">
+                                        <option class="bs-title-option" value="">Seleccione tipo de Becas</option>
+    
+    
+    
+    
+    
+    
+    
+                                        Becas:
+    
+    
+                                        <option value="13" selected="selected">SUBSECUENTE BECA EXCELENCIA ACADEMICA
+                                        </option>
+                                        <option value="17">BECA DE EXCELENCIA ACADEMICA</option>
+                                        <option value="18">BECA DE MATERIAL DE ESTUDIO (MATERIAL BIBLIOGRAFICO)</option>
+                                        <option value="19">BECA DE ALIMENTOS</option>
+                                        <option value="20">BECA DE APOYO AL ARTE Y CULTURA</option>
+                                        <option value="21">BECA POR MATERNIDAD O PATERNIDAD</option>
+                                        <option value="22">BECA DE TRANSPORTE</option>
+                                        <option value="23">BECA DE APOYO AL DEPORTE Y CULTURA FISICA</option>
+                                        <option value="24">BECA DE ALQUILER</option>
+                                    </select>
+                                    <div class="btn-group bootstrap-select" style="width: 100%;"><button type="button"
+                                            class="btn dropdown-toggle btn-default" data-toggle="dropdown"
+                                            data-id="tipobeca" title="SUBSECUENTE BECA EXCELENCIA ACADEMICA"><span
+                                                class="filter-option pull-left">SUBSECUENTE BECA EXCELENCIA ACADEMICA
+                                            </span>&nbsp;<span class="caret"></span></button>
+                                        <div class="dropdown-menu open">
+                                            <div class="bs-searchbox"><input type="text" class="form-control"
+                                                    autocomplete="off"></div>
+                                            <ul class="dropdown-menu inner" role="menu">
+                                                <li data-original-index="1" class="selected"><a tabindex="0" class=""
+                                                        style="" data-tokens="null"><span class="text">SUBSECUENTE BECA
+                                                            EXCELENCIA ACADEMICA </span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="2"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE EXCELENCIA
+                                                            ACADEMICA</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="3"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE MATERIAL DE ESTUDIO
+                                                            (MATERIAL BIBLIOGRAFICO)</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="4"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE ALIMENTOS</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="5"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE APOYO AL ARTE Y
+                                                            CULTURA</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="6"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA POR MATERNIDAD O
+                                                            PATERNIDAD</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="7"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE TRANSPORTE</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="8"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE APOYO AL DEPORTE Y
+                                                            CULTURA FISICA</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                <li data-original-index="9"><a tabindex="0" class="" style=""
+                                                        data-tokens="null"><span class="text">BECA DE ALQUILER</span><span
+                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="panel panel-info">
+                <!-- -->
+                <div class="panel-heading">
+                    <i class="fa fa-fw fa-search"></i> Datos de la Beca:
+                </div>
+                <br>
+    
+                <div class="container-fluid">
+                    <div class="row container-fluid">
+    
+                        <div class="row">
+    
+                            <div class="col-md-8 col-xs-8" style="color: #428BCA">
+                                <h4 class="">Flujo de la Beca</h4>
+                            </div>
+    
+                            <div class="col-md-12">
+                                <div id="tabla-tipos-flujos-becas-temp_wrapper"
+                                    class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6"></div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="tabla-tipos-flujos-becas-temp"
+                                                class="table table-striped table-bordered nowrap dataTable no-footer dtr-inline"
+                                                style="width: 100%;" role="grid">
+                                                <thead>
+                                                    <tr class="blue-header" role="row">
+                                                        <th class="sorting_asc" tabindex="0"
+                                                            aria-controls="tabla-tipos-flujos-becas-temp" rowspan="1"
+                                                            colspan="1" style="width: 43px;"
+                                                            aria-label="Orden: activate to sort column descending"
+                                                            aria-sort="ascending">Orden</th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-tipos-flujos-becas-temp" rowspan="1"
+                                                            colspan="1" style="width: 358px;"
+                                                            aria-label="Unidad: activate to sort column ascending">Unidad
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-tipos-flujos-becas-temp" rowspan="1"
+                                                            colspan="1" style="width: 189px;"
+                                                            aria-label="Estado: activate to sort column ascending">Estado
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-tipos-flujos-becas-temp" rowspan="1"
+                                                            colspan="1" style="width: 211px;"
+                                                            aria-label="Termina: activate to sort column ascending">Termina
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-tipos-flujos-becas-temp" rowspan="1"
+                                                            colspan="1" style="width: 185px;"
+                                                            aria-label="Acción: activate to sort column ascending">Acción
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1" tabindex="0">1</td>
+                                                        <td>DEPARTAMENTO BIENESTAR</td>
+                                                        <td>HABILITADO</td>
+                                                        <td>NO</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td class="sorting_1" tabindex="0">2</td>
+                                                        <td>VICERRECTORADO ACADEMICO</td>
+                                                        <td>HABILITADO</td>
+                                                        <td>NO</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1" tabindex="0">3</td>
+                                                        <td>PROCURADORIA</td>
+                                                        <td>HABILITADO</td>
+                                                        <td>NO</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td class="sorting_1" tabindex="0">4</td>
+                                                        <td>DIRECCION FINANCIERA(PRESUPUESTO)</td>
+                                                        <td>HABILITADO</td>
+                                                        <td>NO</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1" tabindex="0">5</td>
+                                                        <td>PROCURADORIA</td>
+                                                        <td>HABILITADO</td>
+                                                        <td>NO</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-5"></div>
+                                        <div class="col-sm-7"></div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+    
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-8 col-xs-8" style="color: #428BCA">
+                                <h4 class="">Requisitos de la Beca</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="tabla-ver-requisitos-temp_wrapper"
+                                    class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6"></div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="tabla-ver-requisitos-temp"
+                                                class="table table-striped table-bordered nowrap dataTable no-footer dtr-inline"
+                                                style="width: 100%;" role="grid">
+                                                <thead>
+                                                    <tr class="blue-header" role="row">
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-ver-requisitos-temp" rowspan="1"
+                                                            colspan="1" style="width: 788px;"
+                                                            aria-label="Requisitos: activate to sort column ascending">
+                                                            Requisitos</th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="tabla-ver-requisitos-temp" rowspan="1"
+                                                            colspan="1" style="width: 251px;"
+                                                            aria-label="Tipo de requisitos: activate to sort column ascending">
+                                                            Tipo de requisitos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row" class="odd">
+                                                        <td tabindex="0">ESTUDIANTE REGULAR DE CARRERA</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td tabindex="0">NO POSEER SANCIONES INDISCIPLINARIAS</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td tabindex="0">APROBAR TODAS LAS MATERIAS CURSADAS EN EL PERIODO
+                                                            ACADEMICO</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td tabindex="0">NO POSEER TITULO TERCER NIVEL</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td tabindex="0">NO POSEER BECA DE GOBIERNO</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td tabindex="0">NO SER SERVIDOR PÚBLICO</td>
+                                                        <td><a class="btn btn-xs btn-success" disabled=""><i
+                                                                    class="fa fa-check fa-fw"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-5"></div>
+                                        <div class="col-sm-7"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <script type="text/javascript">
+
+                $(document).ready(function () {
+
+                    var idpersona = "39506";
+                    var idperiodo = "91";
+                    var idescuela = "138";
+                    var idbecas = "0";
+                    var subsecuente = "";
+                    let idpersonal = "39506";
+                    // alert (idpersona);
+
+
+                    // alert(idpersona);
+                    $.getJSON(BASE_URL + "becas/principal/get_lista_becas_flujo/" + idescuela, function (data) {
+                        $.each(data, function (key, value) {
+                            $('#tipobeca').append('<option value=' + value.id_tipobecas + '>' + value.nombre + '</option>');
+                        });
+                        $('#tipobeca').selectpicker('refresh');
+                        if (subsecuente) {
+                            //  alert(idbecas);
+                            // $('#tipobeca option[value='+ idbecas +']').attr('selected',true);
+                            $('select[name=tipobeca]').val(idbecas);
+                            // $("[name=tipobeca]").change();
+                            $('#tipobeca').selectpicker('refresh');
+                            $select = $('#tipobeca');
+                            $select.trigger('change');
+                        }
+                    });
+
+                    $.getJSON(BASE_URL + "becas/principal/get_ver_datos/" + idpersona, function (data) {
+                        $.each(data, function (key, value) {
+                            $("#txtcedula").html(value.r_cedula + "  ");
+                            $("#txtpaciente").html(value.r_nombres + "  ");
+                            //   $('#tipobeca').append('<option value=' + value.id_tipobecas + '>' + value.nombre + '</option>');
+                        });
+                        // $('#tipobeca').selectpicker('refresh');
+                    });
+                    $.getJSON(BASE_URL + "becas/principal/datos_pacientes_becas/" + idpersona, function (datos_paciente) {
+                        idpersonal = datos_paciente.idpersonal;
+                        // muestra datos del paciente
+                        $('#cedula').html(datos_paciente.cedula);
+                        $('#nombres').html(datos_paciente.nombres);
+                        $('#apellidos').html(datos_paciente.apellidos);
+                        $('#telefono').html(datos_paciente.telefono);
+                        $('#direccion').html(datos_paciente.direccion);
+                        $('#zona').html(datos_paciente.zona);
+                        $('#parroquia').html(datos_paciente.parroquia);
+                        $('#canton').html(datos_paciente.canton);
+                        $('#provincia').html(datos_paciente.provincia);
+                        $('#nombre_contacto').html(datos_paciente.nombres_emergencia);
+                        $('#direccion_contacto').html(datos_paciente.direccion_contacto);
+                        $('#parentesco').html(datos_paciente.nombre_parentesco);
+                        $('#facultad').html(datos_paciente.facultad);
+                        $('#escuela').html(datos_paciente.escuela);
+                        $('#nivel').html(datos_paciente.nivel);
+                        $('#promedio').html(datos_paciente.promedio);
+                        $('#telefono_contacto').html(datos_paciente.telefono_emergencia1 + ' - ' + datos_paciente.telefono_emergencia2);
+                        // alert(evaluacion_social);
+
+                    });
+
+                    $('#tipobeca').change(function () {
+                        var idbecas = $("[name=tipobeca] :selected").val();
+                        var nivel = $('#nivel').html();
+
+                        $.ajax({
+                            url: BASE_URL + "becas/principal/get_control_requisitos",
+                            type: 'post',
+                            dataType: "json",
+                            data: {
+                                idbecas,
+                                idpersonal,
+                                idescuela,
+                                nivel
+                            },
+                            success: function (data) {
+                                var tablaverrequisitos = $('#tabla-ver-requisitos-temp').DataTable();
+                                tablaverrequisitos.clear().draw();
+                                $.each(data, function (key, valuerequisitos) {
+                                    let requisitos = '<a class="btn btn-xs btn-danger" disabled><i class="fa fa-ban fa-fw" ></i></a>'
+                                    // // 		 ;
+                                    if (valuerequisitos.f_requisitos == 'false') {
+
+                                        message('No cumple con el siguiente requisito: ' + valuerequisitos.nombre, 'danger', 15);
+                                        document.getElementById("guardar_beca").disabled = true;
+                                    }
+                                    else requisitos = '<a class="btn btn-xs btn-success" disabled><i class="fa fa-check fa-fw" ></i></a>'
+
+                                    var req = [
+                                        valuerequisitos.id_requisito,
+                                        valuerequisitos.nombre,
+                                        requisitos
+                                    ];
+                                    tablaverrequisitos.row.add(req).draw();
+                                });
+                                //  $('#respuesta').html(data);
+                                //  document.getElementById("guardar_beca").disabled = false;
+
+
+                                //  });
+                            },
+                            error: function (data) {
+                                message('Hubo un problema al guardar', 'error', 5);
+                                // document.getElementById("guardar-inscripcion").disabled = false;
+                            }
+                        });
+
+                        $.getJSON(BASE_URL + "becas/principal/get_becas_flujos/" + idbecas, function (datos) {
+                            var tablacomprobante1 = $('#tabla-tipos-flujos-becas-temp').DataTable();
+                            tablacomprobante1.clear().draw();
+                            $.each(datos, function (key, valuecomprobantes) {
+                                if (valuecomprobantes.estado == 't') var estado = 'HABILITADO';
+                                else var estado = 'DESHABILITADO';
+                                if (valuecomprobantes.termina == 't') var termina = 'SI';
+                                else var termina = 'NO';
+                                var datos = [
+                                    valuecomprobantes.orden,
+                                    valuecomprobantes.idtipo_flujo,
+                                    valuecomprobantes.idunidad,
+                                    valuecomprobantes.unidad,
+                                    estado,
+                                    termina,
+                                    '',
+                                    valuecomprobantes.estado,
+                                    valuecomprobantes.termina
+                                    // '<a class="btn btn-xs btn-danger eliminar" href="#"><i class="fa fa-eye fa-fw"></i> <strong>Deshabilitar</strong> </a>'
+                                ];
+                                tablacomprobante1.row.add(datos).draw();
+
+                            });
+                        });
+                    });
+
+
+
+
+                    $('.guardar_beca').click(function () {
+                        waitingDialog.show('Espere por favor...', { dialogSize: 'sm', progressType: 'primary' });
+                        var tablaflujo = $('#tabla-tipos-flujos-becas-temp').DataTable();
+                        var arreglo = new Array();
+                        tablaflujo.data().each(function (value, index) {
+
+                            arreglo[index] = {
+                                "orden": value[0],
+                                "idtipoflujo": value[1],
+                                "idunidad": value[2],
+                                "termina1": value[7]
+
+                            }
+                        });
+                        arreglo = $.grep(arreglo, function (n) { return (n) });
+                        idbecas = $("[name=tipobeca] :selected").val();
+
+                        $.ajax({
+                            url: BASE_URL + "becas/principal/guardar_solicitud_beca",
+                            type: 'post',
+                            data: {
+                                idpersona,
+                                idperiodo,
+                                idbecas,
+                                idescuela,
+                                arreglo: JSON.stringify(arreglo)
+                            },
+                            success: function (data) {
+
+                                message('Se guardo de manera correcta el flujo', 'success', 10);
+                                waitingDialog.hide();
+
+                            },
+                            error: function (data) {
+                                message('Hubo un problema al guardar o el estudiante ya tiene una BECA en proceso vigente', 'error', 10);
+                                waitingDialog.hide();
+                            }
+
+                        });
+
+
+
+                    });
+
+                    waitingDialog.hide();
+                });
+
+                // function f_requisitos() {
+
+
+
+
+
+                // //  $.getJSON(BASE_URL+"becas/principal/get_control_requisitos/"+idbecas,function(data){
+                // // var tablaverrequisitos = $('#tabla-ver-requisitos-temp').DataTable();
+                // // tablaverrequisitos.clear().draw();
+                // // $.each(data,function(key,valuerequisitos){
+                // //   var req = [
+                // //         valuerequisitos.idtipo,
+                // //         valuerequisitos.nombre,
+                // //         valuerequisitos.habilitado,
+                // //        	 '<a class="btn btn-xs btn-success eliminar" href="#"><i class="fa fa-eye fa-fw"></i> <strong>Ver estado</strong> </a>'
+                // // 		 	];
+                // //      tablaverrequisitos.row.add(req).draw();
+                // // });
+
+                // // });
+
+
+                // }
+
+                $('#tabla-tipos-flujos-becas-temp').dataTable({
+
+
+                    "paging": false,
+                    "ordering": true,
+                    "info": false,
+                    "bFilter": false,
+                    "bLengthChange": false,
+                    "autoWidth": false,
+                    "columnDefs": [
+                        { "width": "5%", "targets": 0 }, { "width": "35%", "targets": 3 },
+                        {
+                            "targets": [1],
+                            "visible": false,
+                        },
+                        {
+                            "targets": [2],
+                            "visible": false,
+                        },
+                        {
+                            "targets": [7],
+                            "visible": false,
+                        },
+                        {
+                            "targets": [8],
+                            "visible": false,
+                        }, { "defaultContent": "-", "targets": "_all" }],
+                    "autoWidth": true,
+                    "order": [0, "asc"],
+                    "responsive": true
+
+                });
+
+
+                $('#tabla-ver-requisitos-temp').dataTable({
+
+                    "paging": false,
+                    "ordering": true,
+                    "info": false,
+                    "bFilter": false,
+                    "bLengthChange": false,
+                    "autoWidth": false,
+                    "columnDefs": [
+                        { "width": "75%", "targets": 1 },
+
+                        {
+                            "targets": [0],
+                            "visible": false,
+                        }
+                    ],
+                    "autoWidth": true,
+                    "order": [0, "asc"],
+                    "responsive": true
+
+                });
+
+
+            </script>
+        </div>
+    
+    
+    </div>
+</div>

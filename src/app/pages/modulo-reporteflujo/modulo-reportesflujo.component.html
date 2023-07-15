@@ -1,0 +1,25 @@
+<div class="contenido_dashboard">
+    <nz-page-header>
+    <nz-page-header-title> REPORTE SGB </nz-page-header-title>
+    <nz-page-header-extra> 
+        <button nz-button nz-popconfirm nz-popconfirmTitle="E" nzType="primary" nz-popconfirmPlacement="bottomRight"> 
+            GENERAR
+        </button>
+    </nz-page-header-extra>
+</nz-page-header>
+   
+<nz-page-header-title> DATOS </nz-page-header-title>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }"> 
+
+        <div nz-col class="gutter-row" [nzSpan]="11"> 
+            <h5 nz-typography> Periodo Académico:  </h5>
+           <nz-select nzAllowClear nzPlaceHolder=" Seleccione el periodo ... "> 
+                <nz-option *ngFor="let item of periodos" nzValue="{{item.idperiodo}}"
+                nzLabel="{{item.nombre}}">
+                </nz-option> 
+            </nz-select>
+        </div>
+</div>
+
+
+

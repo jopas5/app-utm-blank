@@ -1,0 +1,49 @@
+<div class="contenido_dashboard">
+    <nz-tabset [(nzSelectedIndex)]="tab">
+        
+
+        <nz-tab nzTitle="">
+            <nz-table #nzTablePersonas nzTableLayout="fixed" [nzData]="personas">
+                
+                <thead>
+                    <div nz-col class="gutter-row" [nzSpan]="16">
+                        <nz-page-header-title> Listado de Estudiantes </nz-page-header-title>
+                    </div> 
+                    
+                <div nz-col class="gutter-row" [nzSpan]="25">
+                    <label > Selecione el Periodo (*): </label>
+                    <input type="string" id="fechaNacimiento" [(ngModel)]="persona.fecha_nacimiento" required>
+ 
+                </div>
+                   
+                
+                    <tr>
+                        <th style="width: 15%; text-align: center;">ID</th>
+                        <th style="width: 15%; text-align: center;">Cedula.</th>
+                        <th style="width: 20%; text-align: center;">Nombres</th>
+                        <th style="width: 20%; text-align: center;">Nivel</th>
+                        <th style="width: 20%; text-align: center;">Escuela</th>
+                        <th style="width: 20%; text-align: center;">Discapacidad</th>
+                        <th style="width: 20%; text-align: center;">?</th>
+                        <th style="width: 20%; text-align: center;">Beca</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of nzTablePersonas.data; let i = index">
+                        <td style="text-align: center;">{{item.ID}}</td>
+                        <td style="text-align: center;">{{item.Cedula}}</td>
+                        <td style="text-align: justify;">{{item.nombres}}</td>
+                        <td style="text-align: justify;">{{item.Nivel}}/td>
+                        <td style="text-align: center;">{{item.Escuela}}</td>
+                        <td style="text-align: center;">{{item.Discapacidad}}</td>
+                        <td style="text-align: center;">{{item.Tipo_Becas}}</td>
+                        <td style="text-align: center;">{{item.Acciones}}</td>
+
+
+                    </tr>
+                </tbody>
+            </nz-table>
+        </nz-tab>
+    </nz-tabset>
+</div>
