@@ -126,6 +126,9 @@ export class ApiService {
   obtener_becados(anio_inicio: number){
     return this.http.get(this.url_becas + "get_becados/" + anio_inicio);
   }
+   no_aprobados() {
+    return this.http.get(this.url_becas + 'get_becados_estados_no');
+  }
   
   
 
