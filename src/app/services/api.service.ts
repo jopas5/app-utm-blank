@@ -128,13 +128,8 @@ export class ApiService {
   }
    no_aprobados() {
     return this.http.get(this.url_becas + 'get_becados_estados_no');
-  }
+   }
   
-  
-
-  
-
-
   conectar() {
     if (typeof (this.socket) != "undefined") {
       try {

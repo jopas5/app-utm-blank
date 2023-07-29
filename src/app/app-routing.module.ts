@@ -74,6 +74,11 @@ const routes: Routes = [
       { 
         path: 'modulo_reporte_flujo', 
         loadChildren: () => import('./pages/modulo-reporteflujo/modulo-reportesflujo.module').then(m => m.moduloreportesflujoModule)
+      },
+
+      { 
+        path: 'proceso_nivelacion', 
+        loadChildren: () => import('./pages/modulo-proceso-nivelacion/proceso-nivelacion/proceso-nivelacion.module').then(m => m.ProcesoNivelacionModule)
       }
     ]
   }  

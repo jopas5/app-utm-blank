@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "axios": "^0.27.2",
     "jsreport-browser-client-dist": "^1.3.0",
     "jsreport-core": "^2.10.1",

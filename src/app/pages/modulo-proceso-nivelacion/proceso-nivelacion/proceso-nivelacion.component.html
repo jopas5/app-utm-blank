@@ -1,0 +1,538 @@
+<div class="contenido_dashboard">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+        <div nz-col class="gutter-row" [nzSpan]="8">
+            <nz-breadcrumb>
+                <nz-breadcrumb-item>
+                    <a>
+                        <span nz-icon nzType="home"></span>
+                        <span>Home</span>
+                    </a>
+                    
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                    <a>
+                        <span>Nivelación</span>
+                    </a>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                    <a>
+                        <span>Procesos Nivelación</span>
+                    </a>
+                    
+                </nz-breadcrumb-item>
+            </nz-breadcrumb>
+        </div>
+    </div>
+
+
+    <nz-tabset [(nzSelectedIndex)]="tab">
+        <nz-tab>
+        </nz-tab>
+    </nz-tabset>   
+    
+    <nz-tabset [(nzSelectedIndex)]="tab">
+
+        <nz-tab [nzTitle]="tab1">
+            <ng-template #tab1>
+                <span nz-icon nzType="book" nzTheme="outline"></span>
+                Declaración de Veracidad
+            </ng-template>
+            
+            <nz-card>
+                <nz-card nzType="inner" nzTitle="Declaración de Veracidad de la Información" style="text-align: justify;">
+                    <p>Yo, ciudadano con número de identificacion: <b>{{cedula}}</b>, declaro voluntariamente:</p>
+                    <ul>
+                        <li>Ser responsable de la veracidad de la información registrada en la plataforma informática de la UTM y conocer que en el caso de comprobarse que la información falte de alguna manera a la verdad, la UTM suspenderá mi incripción y anulará mi proceso de admisión, sin perjucios a las acciones legales o las que hubiere lugar, de conformidad a lo dispuesto en el primer inciso del artículo 270 del COIP.</li>
+                        <li>Ser responsable exclusivo del uso de las credenciales de acceso a la plataforma del Sistema de Gestión Académica - Adminisiones UTM.</li>
+                        <li>El uso indebido de las credenciales de la cuenta de cada aspirante, traerá consigo responsabilidades administrativas, cíviles o penales, de ser el caso.</li>
+                        <li>Conocer y estar de acuerdo con el contenido y alcance de los términos que se me han expuesto. Para lo cual dejo constancia de mi aceptación al continuar con el presente proceso.</li>
+                    </ul>
+                    <button nz-button nzType="primary"><span nz-icon nzType="read" nzTheme="outline"></span>Aceptar y Continuar</button>
+                </nz-card>
+            </nz-card>
+        </nz-tab>
+
+        <nz-tab [nzTitle]=tab2>
+            <ng-template #tab2>
+                <span nz-icon nzType="idcard" nzTheme="outline"></span>
+                Datos Personales
+            </ng-template>
+            <nz-card>
+                <nz-card nzType="inner" [nzTitle]=Personal>
+                    <ng-template #Personal>
+                        <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                        &nbsp;Personal
+                    </ng-template>
+                    <!-- Nacionalidad y Nacionalidad Indígena -->
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Nacionalidad:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Nacionalidad" -->
+                            </nz-select>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Nacionalidad Indígena:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Nacionalidad Indígena" -->
+                            </nz-select>
+                        </div>
+                    </div>
+            
+                    <!-- CEDULA y Sexo -->
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">CEDULA:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones  -->
+                            </nz-select>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Sexo:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Sexo" -->
+                            </nz-select>
+                        </div>
+                    </div>
+            
+                    <!-- Nombres y Apellidos -->
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Nombres:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Nombres" -->
+                            </nz-select>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Apellidos:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Apellidos" -->
+                            </nz-select>
+                        </div>
+                    </div>
+            
+                    <!-- Estado Civil y Tipo de Sangre -->
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Estado Civil:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Estado Civil" -->
+                            </nz-select>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Tipo de Sangre:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Tipo de Sangre" -->
+                            </nz-select>
+                        </div>
+                    </div>
+            
+                    <!-- Etnia y Fecha de Nacimiento -->
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Etnia:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-select class="custom-select-width">
+                                <!-- Opciones para "Etnia" -->
+                            </nz-select>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Fecha de Nacimiento:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <nz-date-picker ></nz-date-picker>
+                        </div>
+                    </div>
+            
+                </nz-card>
+            </nz-card>
+
+            <nz-card>
+                <nz-card nzType="inner" [nzTitle]=Comunicacion>
+                    <ng-template #Comunicacion>
+                        <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                        &nbsp;Comunicación
+                    </ng-template>
+                    
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+            
+                        <!-- Columna 1 -->
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Email personal:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <input nz-input placeholder="estudiante@mail.com">
+                        </div>
+            
+                        <!-- Columna 2 -->
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Confirmar Email:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <input nz-input>
+                        </div>
+            
+                    </div>
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+            
+                        <!-- Columna 3 -->
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Teléfono:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <input nz-input>
+                        </div>
+            
+                        <!-- Columna 4 -->
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <h4 class="subtitulos">Celular:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="6">
+                            <input nz-input>
+                        </div>
+            
+                    </div>
+                </nz-card>
+            </nz-card>
+            
+            <nz-card>
+                <nz-card nzType="inner" [nzTitle]=Discapacidad>
+                    <ng-template #Discapacidad>
+                        <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                        &nbsp;Discapacidad
+                    </ng-template>
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+            
+                        <!-- Columna 1 -->
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <h4 class="subtitulos">Posee alguna discapacidad?:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <nz-switch [ngModel]="false" nzCheckedChildren="SI" nzUnCheckedChildren="NO"></nz-switch>
+                        </div>
+            
+                        <!-- Columna 2 -->
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <h4 class="subtitulos">Discapacidad:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <nz-input-number [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="100" [nzStep]="1"
+                                [nzFormatter]="formatterPercent" [nzParser]="parserPercent"></nz-input-number>
+                        </div>
+            
+                        <!-- Columna 3 -->
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <h4 class="subtitulos">Carnet Conadis:</h4>
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="12">
+                            <input nz-input>
+                        </div>
+                    </div>
+                </nz-card>
+            </nz-card>
+
+
+            <nz-tabset [(nzSelectedIndex)]="tab">
+                <nz-tab nzTitle="">
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="20">
+            
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="1">
+                            <button nz-button nzType="primary">Siguiente</button>
+                        </div>
+                    </div>
+                </nz-tab>
+            </nz-tabset>
+        </nz-tab> 
+        
+        <nz-tab [nzTitle]=tab3>
+    <ng-template #tab3>
+        <span nz-icon nzType="home" nzTheme="outline"></span>
+        Datos de Residencia
+    </ng-template>
+    <nz-card>
+        <nz-card nzType="inner" [nzTitle]=Informacion_Residencia>
+            <ng-template #Informacion_Residencia>
+                <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                &nbsp;Información de Residencia
+            </ng-template>
+
+            <!-- Nacionalidad y Nacionalidad Indígena -->
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">País Reside:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Nacionalidad" -->
+                    </nz-select>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Otra Ciudad:
+                        <p nz-checkbox></p>
+                    </h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <input nz-input>
+                </div>
+            </div>
+
+
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Provincia Reside:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Nacionalidad Indígena" -->
+                    </nz-select>
+                </div>
+
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Dirección:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <textarea nz-input placeholder="Ingrese dirección"></textarea>
+                </div>
+            </div>
+
+            <!-- Nombres y Apellidos -->
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Cantón Reside:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Nacionalidad Indígena" -->
+                    </nz-select>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Barrio:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <textarea nz-input placeholder="Ingrese barrio o ciudadela"></textarea>
+                </div>
+            </div>
+
+            <!-- Estado Civil y Tipo de Sangre -->
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Parroquia Reside:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Nacionalidad Indígena" -->
+                    </nz-select>
+                </div>
+            </div>
+
+        </nz-card>
+    </nz-card>
+
+    <nz-card>
+        <nz-card nzType="inner" [nzTitle]=Lugar_nacimiento>
+            <ng-template #Lugar_nacimiento>
+                <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                &nbsp;Lugar de Nacimiento
+            </ng-template>
+            <nz-card style="background-color: cyan;">
+                <span nz-icon nzType="notification" nzTheme="outline"></span>
+                <label>
+                    &nbsp;Importante: Si usted es un estudiante extranjero no es necesario que registre la Provincia,
+                    Cantón y Parroquia de Nacimiento.
+                </label>
+            </nz-card>
+
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                <!-- Columna 1 -->
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">País Nacimiento:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Email personal" -->
+                    </nz-select>
+                </div>
+
+                <!-- Columna 2 -->
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Cantón Nacimiento:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Confirmar Email" -->
+                    </nz-select>
+                </div>
+
+            </div>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+
+                <!-- Columna 3 -->
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Provincia Nacimiento:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Teléfono" -->
+                    </nz-select>
+                </div>
+
+                <!-- Columna 4 -->
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <h4 class="subtitulos">Parroquia Nacimiento:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="6">
+                    <nz-select class="custom-select-width">
+                        <!-- Opciones para "Celular" -->
+                    </nz-select>
+                </div>
+            </div>
+        </nz-card>
+    </nz-card>
+
+    <nz-tabset [(nzSelectedIndex)]="tab">
+        <nz-tab nzTitle="">
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                <div nz-col class="gutter-row" [nzSpan]="20">
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="1">
+                    <button nz-button nzType="primary">Siguiente</button>
+                </div>
+            </div>
+        </nz-tab>
+    </nz-tabset>
+        </nz-tab>        
+
+        <nz-tab [nzTitle]=tab4>
+    <ng-template #tab4>
+        <span nz-icon nzType="laptop" nzTheme="outline"></span>
+        Datos Tecnológicos
+    </ng-template>
+
+    <nz-card>
+        <nz-card nzType="inner" [nzTitle]=Datos_tecnologico>
+            <ng-template #Datos_tecnologico>
+                <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                &nbsp;Datos Tecnologicos
+            </ng-template>
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+    
+                <!-- Columna 1 -->
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <h4 class="subtitulos">Servicio de Internet:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-switch [ngModel]="false" nzCheckedChildren="SI" nzUnCheckedChildren="NO"></nz-switch>
+                </div>
+    
+                <!-- Columna 2 -->
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <h4 class="subtitulos">Cuenta con Computador:</h4>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-switch [ngModel]="false" nzCheckedChildren="SI" nzUnCheckedChildren="NO"></nz-switch>
+                </div>
+    
+            </div>
+        </nz-card>
+    </nz-card>
+
+        </nz-tab>
+
+        <nz-tab [nzTitle]=tab5>
+            <ng-template #tab5>
+                <span nz-icon nzType="folder-open" nzTheme="outline"></span>
+                Datos Académicos
+            </ng-template>
+            <nz-card>
+                <nz-card nzType="inner" [nzTitle]=Informacion_academica>
+                    <ng-template #Informacion_academica>
+                        <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                        &nbsp;Información Académica
+                    </ng-template>
+
+                    <button nz-button nzType="primary">Nuevo</button>
+                    <p style="font-size:14px;color:rgba(0, 0, 0, 0.85);margin-bottom:16px;font-weight: 500;"></p>
+                
+                    <nz-table #borderedTable nzBordered>
+                        <thead>
+                            <tr>
+                                <th>Nivel Formación</th>
+                                <th>Institución</th>
+                                <th>Título</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of borderedTable.data">
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;">
+                                    <button nz-button nzType="primary" nzGhost>Editar</button>
+                                </td>
+                                <td style="text-align: center;">
+                                    <button nz-button nzType="primary" nzGhost>Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </nz-card>
+            </nz-card>
+            
+        
+            <nz-tabset [(nzSelectedIndex)]="tab">
+                <nz-tab nzTitle="">
+        
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+                        <div nz-col class="gutter-row" [nzSpan]="20">
+        
+                        </div>
+                        <div nz-col class="gutter-row" [nzSpan]="1">
+                            <button nz-button nzType="primary">Siguiente</button>
+                        </div>
+        
+                    </div>
+                </nz-tab>
+            </nz-tabset>
+        
+        </nz-tab>
+
+        <nz-tab [nzTitle]=tab6>
+        <ng-template #tab6>
+            <span nz-icon nzType="file-pdf" nzTheme="outline"></span>
+            Comprobante
+        </ng-template>
+        <nz-card>
+            <p style="font-size:14px;color:rgba(0, 0, 0, 0.85);margin-bottom:16px;font-weight: 500;"></p>
+            <nz-card nzType="inner" nzTitle="Imprimir Comprobante" style="text-align: center;">
+                <p>Si está seguro de realizar su inscripción haga clic en aceptar</p>
+                <button nz-button nzType="primary"><span nz-icon nzType="read" nzTheme="outline"></span>Aceptar y
+                    Continuar</button>
+            </nz-card>
+        </nz-card>
+        </nz-tab>
+
+    </nz-tabset>         
+</div>
